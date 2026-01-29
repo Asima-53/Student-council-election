@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Council Secretary Election</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-vote-yea"></i>
+                <h1>College Student Council</h1>
+                <h2>Secretary Election 2026</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Vote</a></li>
+                    <li><a href="admin.html" id="admin-link"><i class="fas fa-lock"></i> Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="election-info">
+            <h2><i class="fas fa-info-circle"></i> Election Information</h2>
+            <p>Cast your vote for the Student Council Secretary position. Voting is open to all registered students from 9 AM to 5 PM today.</p>
+            <p><strong>Note:</strong> Each student can vote only once. Your register number will be recorded to prevent multiple voting.</p>
+        </div>
+
+        <div class="content-wrapper">
+            <section class="voting-form">
+                <h2><i class="fas fa-check-circle"></i> Cast Your Vote</h2>
+                
+                <form id="voteForm">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                        <div class="error-message" id="name-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regNumber"><i class="fas fa-id-card"></i> Register Number</label>
+                        <input type="text" id="regNumber" placeholder="Enter your college register number" required>
+                        <div class="error-message" id="reg-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="department"><i class="fas fa-graduation-cap"></i> Department</label>
+                        <select id="department" required>
+                            <option value="">Select your department</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Electrical Engineering">Electrical Engineering</option>
+                            <option value="Mechanical Engineering">Mechanical Engineering</option>
+                            <option value="Civil Engineering">Civil Engineering</option>
+                            <option value="Electronics Engineering">Electronics Engineering</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Biotechnology">Biotechnology</option>
+                            <option value="Chemical Engineering">Chemical Engineering</option>
+                        </select>
+                        <div class="error-message" id="dept-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-users"></i> Select Your Candidate</label>
+                        
+                        <div class="candidates-container">
+                            <div class="candidate-option">
+                                <input type="radio" id="candidate1" name="candidate" value="Logo Shri" required>
+                                <label for="candidate1" class="candidate-card">
+                                    <div class="candidate-img" style="background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <div class="candidate-info">
+                                        <h3>Loga Shri</h3>
+                                        <p>Computer Science & Engineering</p>
+                                        <p class="slogan">"Tech Innovation & Student Excellence"</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="candidate-option">
+                                <input type="radio" id="candidate2" name="candidate" value="Esai Risha" required>
+                                <label for="candidate2" class="candidate-card">
+                                    <div class="candidate-img" style="background: linear-gradient(135deg, #9C27B0, #E91E63);">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                    <div class="candidate-info">
+                                        <h3>Esai Risha</h3>
+                                        <p>Electrical & Electronics Engineering</p>
+                                        <p class="slogan">"Powering Campus with Innovation"</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="candidate-option">
+                                <input type="radio" id="candidate3" name="candidate" value="Geo Safil" required>
+                                <label for="candidate3" class="candidate-card">
+                                    <div class="candidate-img" style="background: linear-gradient(135deg, #2196F3, #00BCD4);">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <div class="candidate-info">
+                                        <h3>Geo Safil</h3>
+                                        <p>Biomedical Instrumentation Engineering</p>
+                                        <p class="slogan">"Engineering Excellence & Growth"</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="candidate-option">
+                                <input type="radio" id="candidate4" name="candidate" value="Antin Shefilda" required>
+                                <label for="candidate4" class="candidate-card">
+                                    <div class="candidate-img" style="background: linear-gradient(135deg, #FF9800, #FF5722);">
+                                        <i class="fas fa-user-nurse"></i>
+                                    </div>
+                                    <div class="candidate-info">
+                                        <h3>Antin Shefilda</h3>
+                                        <p>Biomedical Equipment Engineering</p>
+                                        <p class="slogan">"Building Foundations for Success"</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="error-message" id="candidate-error"></div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Submit Vote
+                    </button>
+                </form>
+            </section>
+            
+            <section class="guidelines">
+                <h2><i class="fas fa-clipboard-list"></i> Election Guidelines</h2>
+                <ul>
+                    <li><i class="fas fa-check"></i> Only registered students are eligible to vote.</li>
+                    <li><i class="fas fa-check"></i> Each student can vote for only one candidate.</li>
+                    <li><i class="fas fa-check"></i> Once submitted, your vote cannot be changed.</li>
+                    <li><i class="fas fa-check"></i> Election results will be announced after voting closes.</li>
+                    <li><i class="fas fa-check"></i> Results are only accessible to election administrators.</li>
+                </ul>
+                
+                <div class="vote-count">
+                    <h3><i class="fas fa-chart-bar"></i> Total Votes Cast</h3>
+                    <div class="count" id="totalVotes">0</div>
+                    <p>Your vote matters! Participate in student democracy.</p>
+                </div>
+                
+                <div class="quick-test">
+                    <h3><i class="fas fa-flask"></i> Quick Test</h3>
+                    <button onclick="addTestVote()" class="test-btn">
+                        <i class="fas fa-plus-circle"></i> Add Test Vote
+                    </button>
+                    <p class="small-text">For demonstration only</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="notification" class="notification"></div>
+
+    <footer>
+        <div class="container">
+            <p>Student Council Secretary Election 2026 &copy; All rights reserved.</p>
+            <p>This election is conducted electronically with secure vote storage.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
